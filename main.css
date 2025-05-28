@@ -5,28 +5,28 @@
 }
 @font-face {
     font-family: "Tektur";
-    src: url('../fonts/Tektur-Regular.ttf');
+    src: url('/fonts/Tektur-Regular.ttf');
     font-style: normal;
     font-weight: 400;
     font-display: swap;
 }
 @font-face {
     font-family: "Tektur";
-    src: url('../fonts/Tektur-Medium.ttf');
+    src: url('/fonts/Tektur-Medium.ttf');
     font-style: normal;
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
     font-family: "Tektur";
-    src: url('../fonts/Tektur-SemiBold.ttf');
+    src: url('/fonts/Tektur-SemiBold.ttf');
     font-style: normal;
     font-weight: 600;
     font-display: swap;
 }
 @font-face {
     font-family: "Tektur";
-    src: url('../fonts/Tektur-Bold.ttf');
+    src: url('/fonts/Tektur-Bold.ttf');
     font-style: normal;
     font-weight: 700;
     font-display: swap;
