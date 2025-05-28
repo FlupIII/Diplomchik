@@ -1,0 +1,13 @@
+@mixin number($url, $width){
+  position: absolute;
+  //top: -50px;
+  //left: 1150px;
+  display: block;
+  width: $width;
+  height: 155px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: '';
+  background-image: $url;
+}

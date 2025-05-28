@@ -36,6 +36,16 @@ body {
   color: #dadada;
 }
 
+h2 {
+  font-size: 64px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 400;
+}
+
 .header {
   padding: 15px 45px;
   display: flex;
@@ -67,6 +77,9 @@ body {
 }
 .header .profile .arrow_up {
   width: 18px;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 .header .profile .arrow_up img {
   width: 100%;
@@ -118,13 +131,70 @@ body {
   background-image: url("/images/about_alem.svg");
 }
 .about_title {
-  font-size: 64px;
-  font-weight: 600;
   margin-bottom: 30px;
 }
-.about_text {
-  font-size: 24px;
-  font-weight: 400;
+
+.features {
+  background: linear-gradient(rgb(75, 75, 75) 100%, rgb(44, 44, 44) 70%);
+  padding: 100px 0;
+}
+.features_title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.features_subtitle {
+  width: 521px;
+  margin: 0 auto 130px;
+  text-align: center;
+}
+.features_list {
+  margin: 0 auto;
+  list-style: none;
+  width: 1053px;
+  display: grid;
+  gap: 127px;
+}
+.features .features-item {
+  width: 520px;
+}
+.features .features-item:first-child::before {
+  position: absolute;
+  display: block;
+  width: 220px;
+  height: 155px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  background-image: url("/icons/union1.svg");
+}
+.features .features-item:nth-child(2) {
+  justify-self: end;
+}
+.features .features-item:nth-child(2)::before {
+  position: absolute;
+  display: block;
+  width: 262px;
+  height: 155px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  background-image: url("/icons/union2.svg");
+}
+.features .features-item:last-child {
+  width: 623px;
+}
+.features .features-item:last-child::before {
+  position: absolute;
+  display: block;
+  width: 270px;
+  height: 155px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  background-image: url("/icons/union3.svg");
 }
 
 /*# sourceMappingURL=styles.css.map */
