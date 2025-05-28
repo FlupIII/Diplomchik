@@ -1,0 +1,26 @@
+.banner{
+  background-image: url('/images/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 340px 0 310px;
+  text-align: center;
+
+  h1{
+    width: 945px;
+    font-size: 128px;
+    font-weight: 700;
+    margin: 0 auto;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+
+    .red{
+      color: $accent-color;
+    }
+  }
+
+  .subtitle{
+    font-size: 32px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+  }
+}

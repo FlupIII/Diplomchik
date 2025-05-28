@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Tektur";
+  src: url("/fonts/Tektur-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tektur";
+  src: url("/fonts/Tektur-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tektur";
+  src: url("/fonts/Tektur-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tektur";
+  src: url("/fonts/Tektur-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Tektur";
+}
+
+body {
+  color: #dadada;
+}
+
+.header {
+  padding: 15px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 200px;
+}
+.header .logo img {
+  width: 100%;
+}
+.header .profile {
+  display: flex;
+  justify-content: space-between;
+  background: #c0c2c3;
+  width: 235px;
+  padding: 7px 15px;
+  border-radius: 30px;
+  align-items: center;
+  font-size: 16px;
+  color: #000;
+}
+.header .profile .profile_photo {
+  width: 45px;
+}
+.header .profile .profile_photo img {
+  width: 100%;
+}
+.header .profile .arrow_up {
+  width: 18px;
+}
+.header .profile .arrow_up img {
+  width: 100%;
+}
+
+.banner {
+  background-image: url("/images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 340px 0 310px;
+  text-align: center;
+}
+.banner h1 {
+  width: 945px;
+  font-size: 128px;
+  font-weight: 700;
+  margin: 0 auto;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+.banner h1 .red {
+  color: #FF381D;
+}
+.banner .subtitle {
+  font-size: 32px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.about {
+  background: linear-gradient(rgb(44, 44, 44) 65%, rgb(75, 75, 75) 100%);
+  padding: 100px;
+}
+.about_content {
+  width: 950px;
+  position: relative;
+}
+.about_content::before {
+  position: absolute;
+  top: -50px;
+  left: 1150px;
+  display: block;
+  width: 550px;
+  height: 550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  background-image: url("/images/about_alem.svg");
+}
+.about_title {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.about_text {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=styles.css.map */

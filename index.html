@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>САР FINANCIAL NAVIGATOR</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<header>
-    <img src="icons/logo.svg" alt="logo" class="logo">
+<header class="header">
+    <div class="logo">
+        <img src="icons/logo.svg" alt="logo" >
+    </div>
     <div class="profile" id="profileDropdown">
-        <img src="icons/profileIcon.svg" alt="profileImage" class="profile_image">
+        <div class="profile_photo">
+            <img src="icons/profileIcon.svg" alt="profileImage">
+        </div>
         <span class="profile_name">Демьян Аксютик</span>
-        <p class="profile_role">Администратор</p>
+        <btn class="arrow_up">
+            <img src="icons/arrow-down.png" alt="arrowDown">
+        </btn>
     </div>
 </header>
 <main>
-    <section class="Home">
-        <img src="images/backgroundMain.png" alt="Background" class="home_background">
-        <h1 class="title">CAR FINANCIAL NAVIGATOR</h1>
+    <section class="banner">
+        <h1 class="title"><span class="red">CAR</span> FINANCIAL NAVIGATOR</h1>
         <p class="subtitle">Финансовая простота для каждого водителя</p>
-        <a href="" class="home_btn_about">Узнать больше</a>
-        <a href="" class="home_btn_start">Начать</a>
-        <span></span>
     </section>
-    <section class="About">
-        <h2 class="about_title">Решаемые задачи</h2>
-        <p class="about_text">В современном мире владение автомобилем связано с множеством финансовых аспектов, и наш
-            проект "Fn Car" создан для того, чтобы упростить этот процесс. Приложение позволяет пользователям легко
-            вводить и отслеживать расходы на топливо, обслуживание, страховку и ремонты, что помогает иметь полное
-            представление о затратах. Мы предоставляем инструменты для анализа расходов с помощью графиков и отчетов,
-            что помогает выявить основные категории затрат и оптимизировать их. С "Fn Car" вы сможете взять под контроль
-            свои автомобильные расходы и сделать процесс управления финансами простым и удобным.
-        </p>
-        <img src="images/about_alem.svg" alt="About" class="about_image">
+    <section class="about">
+        <div class="about_content">
+            <h2 class="about_title">Решаемые задачи</h2>
+            <p class="about_text">В современном мире владение автомобилем связано с множеством финансовых аспектов, и наш
+                проект "Fn Car" создан для того, чтобы упростить этот процесс. Приложение позволяет пользователям легко
+                вводить и отслеживать расходы на топливо, обслуживание, страховку и ремонты, что помогает иметь полное
+                представление о затратах. Мы предоставляем инструменты для анализа расходов с помощью графиков и отчетов,
+                что помогает выявить основные категории затрат и оптимизировать их. С "Fn Car" вы сможете взять под контроль
+                свои автомобильные расходы и сделать процесс управления финансами простым и удобным.
+            </p>
+        </div>
     </section>
     <section class="features">
         <h2 class="features_title">Почему выбирают нас</h2>
