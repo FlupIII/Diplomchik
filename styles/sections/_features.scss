@@ -1,0 +1,70 @@
+.features{
+  background: linear-gradient(rgba(75, 75,75,1) 10%, rgba(44,44,44,1) 100%);
+  padding: 100px 0;
+
+  &_title{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &_subtitle{
+    width: 521px;
+    margin: 0 auto 130px;
+    text-align: center;
+  }
+  &_list{
+    margin: 0 auto;
+    list-style: none;
+    width: 1053px;
+    display: grid;
+    gap: 127px;
+  }
+
+  .features-item{
+    position: relative;
+    width: 520px;
+
+    &:first-child{
+      &::before{
+        @include number(url("/icons/union1.svg"), 220px);
+      }
+
+      &::after{
+        @include decor-img(url("/images/chart.svg"), 415px, 348px, -77px, 695px);
+      }
+    }
+
+    &:nth-child(2){
+      justify-self: end;
+
+      &::before{
+        @include number(url("/icons/union2.svg"), 262px);
+      }
+
+      &::after{
+        @include decor-img(url("/images/calculator.svg"), 405px, 397px, -127px, -590px);
+      }
+    }
+
+    &:last-child{
+      width: 623px;
+
+      &::before{
+        @include number(url("/icons/union3.svg"), 270px);
+      }
+
+      &::after{
+        @include decor-img(url("/images/cash.svg"), 392px, 379px, -77px, 690px);
+      }
+    }
+
+    &_title{
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 10px;
+
+    }
+
+  }
+
+}

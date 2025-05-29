@@ -1,0 +1,45 @@
+.header{
+  padding: 15px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo{
+    width: 200px;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .profile{
+    display: flex;
+    justify-content: space-between;
+    background: #c0c2c3;
+    width: 235px;
+    padding: 7px 15px;
+    border-radius: 30px;
+    align-items: center;
+    font-size: 16px;
+    color: #000;
+
+    .profile_photo{
+      width: 45px;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    .arrow_up{
+      width: 18px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

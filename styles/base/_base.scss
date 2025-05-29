@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Tektur";
+  src: url('/fonts/Tektur-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tektur";
+  src: url('/fonts/Tektur-Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tektur";
+  src: url('/fonts/Tektur-SemiBold.ttf');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tektur";
+  src: url('/fonts/Tektur-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Tektur";
+}
+
+body{
+  color: #dadada;
+}
+
+h2{
+  font-size: 64px;
+  font-weight: 600;
+}
+
+p{
+  font-size: 24px;
+  font-weight: 400;
+}

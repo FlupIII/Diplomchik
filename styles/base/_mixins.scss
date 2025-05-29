@@ -1,0 +1,28 @@
+@mixin number($url, $width){
+  position: absolute;
+  top: calc( 155px / -2);
+  left: calc( $width / -2);
+  display: block;
+  width: $width;
+  height: 155px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: '';
+  background-image: $url;
+}
+
+@mixin decor-img($url, $width, $height, $top, $left){
+  position: absolute;
+  top: $top;
+  left: $left;
+  display: block;
+  width: $width;
+  height: $height;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: '';
+  background-image: $url;
+}
+

@@ -1,0 +1,33 @@
+.about{
+  background: linear-gradient(rgba(44,44,44,1) 65%, rgba(75, 75,75,1) 100%) ;
+  padding: 100px 0;
+
+  &_content{
+    position: relative;
+    width: 1600px;
+    margin: 0 auto;
+
+    &::before{
+      position: absolute;
+      top: -50px;
+      left: 1150px;
+      display: block;
+      width: 550px;
+      height: 550px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      content: '';
+      background-image: url("/images/about_alem.svg");
+    }
+  }
+
+  &_title{
+    margin-bottom: 30px;
+
+  }
+
+  &_text{
+    width: 950px;
+  }
+}

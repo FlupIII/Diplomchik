@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "Tektur";
+    src: url('/fonts/Tektur-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Tektur";
+    src: url('/fonts/Tektur-Medium.ttf');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Tektur";
+    src: url('/fonts/Tektur-SemiBold.ttf');
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Tektur";
+    src: url('/fonts/Tektur-Bold.ttf');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+.header{
+    background:  #FFFFFF;
+}
+.logo {
+    width: 189px;
+    margin-left: 45px;
+    display: flex;
+    justify-content: center;
+}
+.profile{
+    width: 233px;
+    display: flex;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home_content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.title{
+    font: 700 100px/1 'Tektur';
+    color: #FFFFff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.subtitle {
+    font: 400 27px/1 'Tektur';
+    color: #FFFFff;
+    margin-top: 17px;
+}
+
+.home_content{
+    max-width: 950px;
+    flex: 1;
+}
+
+.about{
+    display: flex;
+    gap: 100px;
+    padding: 100px;
+    width: 100%;
+    height: 640px;
+    background: linear-gradient(rgba(44,44,44,1) 65%, rgba(75, 75,75,1) 100%) ;
+}
+
+.about_title{
+    color: rgb(218, 218, 218, 1);
+    margin-bottom: 30px;
+    font: 600 55px/1 'Tektur';
+}
+
+.about_text{
+    color: rgb(218, 218, 218, 1);
+    max-width: 951px;
+    font: 400 24px/1 'Tektur';
+}
+
+.about_image{
+    max-width: 680px;
+}
+
