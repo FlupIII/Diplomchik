@@ -252,4 +252,18 @@ p {
   margin-bottom: 10px;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.dashboard {
+  background-color: #3a3a3a;
+}
+.dashboard .dashboard-wrap {
+  width: 1920px;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  margin: 0 auto;
+}
+.dashboard .statistics_wrap {
+  background-color: rgba(255, 255, 255, 0.21);
+}
+.dashboard .add-note {
+  background-color: #2c2c2c;
+}/*# sourceMappingURL=styles.css.map */
