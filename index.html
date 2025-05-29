@@ -67,39 +67,50 @@
     <section class="dashboard">
         <div class="dashboard-wrap">
             <div class="statistics">
-                <div class="statistics_wrap">
+                <div class="statistics_wrap  widget">
                     <h3 class="statistics_title">Статистика</h3>
 
                     <div class="period-wrap">
                         <input type="date" id="date" name="date">
+                        <span class="split"></span>
                         <input type="date" id="date" name="date">
                     </div>
 
                     <ul class="list">
                         <li class="list_item">
                             <span class="text">Топливо</span>
-                            <span class="sum-text">111,11</span>
-                            <span class="currency">BYR</span>
+                            <div class="sum-wrap">
+                                <span class="sum-text">111,11</span>
+                                <span class="currency">BYR</span>
+                            </div>
                         </li>
                         <li class="list_item">
                             <span class="text">Мойка</span>
-                            <span class="sum-text">111,11</span>
-                            <span class="currency">BYR</span>
+                            <div class="sum-wrap">
+                                <span class="sum-text">111,11</span>
+                                <span class="currency">BYR</span>
+                            </div>
                         </li>
                         <li class="list_item">
                             <span class="text">Обслуживание</span>
-                            <span class="sum-text">1000</span>
-                            <span class="currency">BYR</span>
+                            <div class="sum-wrap">
+                                <span class="sum-text">111,11</span>
+                                <span class="currency">BYR</span>
+                            </div>
                         </li>
                         <li class="list_item">
                             <span class="text">Парковка</span>
-                            <span class="sum-text">111,11</span>
-                            <span class="currency">BYR</span>
+                            <div class="sum-wrap">
+                                <span class="sum-text">111,11</span>
+                                <span class="currency">BYR</span>
+                            </div>
                         </li>
-                        <li class="list_item result">
-                            <span class="text">Итог</span>
-                            <span class="sum-text">111,11</span>
-                            <span class="currency">BYR</span>
+                        <li class="list_item">
+                            <span class="text result">Итог</span>
+                            <div class="sum-wrap">
+                                <span class="sum-text result">111,11</span>
+                                <span class="currency">BYR</span>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -110,16 +121,16 @@
 
                 <div class="console">
                     <button class="console_item">
-                        <img src="" alt="">
+                        <img src="icons/parking.svg" alt="111">
                     </button>
                     <button class="console_item">
-                        <img src="" alt="">
+                        <img src="icons/gas.svg" alt="">
                     </button>
                     <button class="console_item">
-                        <img src="" alt="">
+                        <img src="icons/wash.svg" alt="">
                     </button>
                     <button class="console_item">
-                        <img src="" alt="">
+                        <img src="icons/repair.svg" alt="">
                     </button>
                 </div>
 
@@ -127,24 +138,29 @@
                     <input type="date" id="date" name="date">
 
                     <div class="car-info">
-                        <input type="text" id="volume" name="volume">
-                        <input type="text" id="sum" name="sum">
-                        <input type="text" id="mileage" name="mileage">
+                        <input type="text" id="volume" name="volume" placeholder="Объем,л">
+                        <input type="text" id="sum" name="sum" placeholder="Сумма,BYR">
+                        <input type="text" id="mileage" name="mileage" placeholder="Пробег,км">
                     </div>
 
-                    <input type="text" id="note" name="note" placeholder="Примечание">
+                    <div class="note-wrap">
+                        <textarea id="note" placeholder="Примечание"></textarea>
+                    </div>
+                    
 
                     <button class="btn-add-note">Добавить</button>
                 </div>
             </div>
 
             <div class="my-cars">
-                <h3 class="my-cars_title">Статистика</h3>
+                <div class="my-cars_wrap widget">
+                    <h3 class="my-cars_title">Мои авто</h3>
 
-                <ul class="my-cars_list">
-                    <li class="my-cars_item">BMW E46</li>
-                    <li class="my-cars_item">Mazda RX-7</li>
-                </ul>
+                    <ul class="my-cars_list">
+                        <li class="my-cars_item">BMW E46</li>
+                        <li class="my-cars_item">Mazda RX-7</li>
+                    </ul>
+                </div>
             </div>
         </div>
         
