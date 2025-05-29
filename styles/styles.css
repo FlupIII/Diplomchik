@@ -111,11 +111,12 @@ p {
 
 .about {
   background: linear-gradient(rgb(44, 44, 44) 65%, rgb(75, 75, 75) 100%);
-  padding: 100px;
+  padding: 100px 0;
 }
 .about_content {
-  width: 950px;
   position: relative;
+  width: 1600px;
+  margin: 0 auto;
 }
 .about_content::before {
   position: absolute;
@@ -133,9 +134,12 @@ p {
 .about_title {
   margin-bottom: 30px;
 }
+.about_text {
+  width: 950px;
+}
 
 .features {
-  background: linear-gradient(rgb(75, 75, 75) 100%, rgb(44, 44, 44) 70%);
+  background: linear-gradient(rgb(75, 75, 75) 10%, rgb(44, 44, 44) 100%);
   padding: 100px 0;
 }
 .features_title {
@@ -155,10 +159,13 @@ p {
   gap: 127px;
 }
 .features .features-item {
+  position: relative;
   width: 520px;
 }
 .features .features-item:first-child::before {
   position: absolute;
+  top: -77.5px;
+  left: -110px;
   display: block;
   width: 220px;
   height: 155px;
@@ -168,11 +175,26 @@ p {
   content: "";
   background-image: url("/icons/union1.svg");
 }
+.features .features-item:first-child::after {
+  position: absolute;
+  top: -77px;
+  left: 695px;
+  display: block;
+  width: 415px;
+  height: 348px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  background-image: url("/images/chart.svg");
+}
 .features .features-item:nth-child(2) {
   justify-self: end;
 }
 .features .features-item:nth-child(2)::before {
   position: absolute;
+  top: -77.5px;
+  left: -131px;
   display: block;
   width: 262px;
   height: 155px;
@@ -182,11 +204,26 @@ p {
   content: "";
   background-image: url("/icons/union2.svg");
 }
+.features .features-item:nth-child(2)::after {
+  position: absolute;
+  top: -127px;
+  left: -590px;
+  display: block;
+  width: 405px;
+  height: 397px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  background-image: url("/images/calculator.svg");
+}
 .features .features-item:last-child {
   width: 623px;
 }
 .features .features-item:last-child::before {
   position: absolute;
+  top: -77.5px;
+  left: -135px;
   display: block;
   width: 270px;
   height: 155px;
@@ -195,6 +232,24 @@ p {
   background-position: center;
   content: "";
   background-image: url("/icons/union3.svg");
+}
+.features .features-item:last-child::after {
+  position: absolute;
+  top: -77px;
+  left: 690px;
+  display: block;
+  width: 392px;
+  height: 379px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  background-image: url("/images/cash.svg");
+}
+.features .features-item_title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

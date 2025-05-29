@@ -1,10 +1,11 @@
 .about{
   background: linear-gradient(rgba(44,44,44,1) 65%, rgba(75, 75,75,1) 100%) ;
-  padding: 100px;
+  padding: 100px 0;
 
   &_content{
-    width: 950px;
     position: relative;
+    width: 1600px;
+    margin: 0 auto;
 
     &::before{
       position: absolute;
@@ -24,5 +25,9 @@
   &_title{
     margin-bottom: 30px;
 
+  }
+
+  &_text{
+    width: 950px;
   }
 }
