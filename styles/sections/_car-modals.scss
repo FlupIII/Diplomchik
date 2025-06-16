@@ -1,0 +1,84 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal_box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal_title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.modal_input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.modal_submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #f32;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.car-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  .car-card {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+    position: relative;
+
+    .delete-car {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+#modal-add-car,
+#modal-cars-list {
+  .modal_box {
+    width: 340px;
+  }
+
+  .modal_submit {
+    background-color: #f32;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}

@@ -11,14 +11,21 @@
     <div class="logo">
         <img src="icons/logo.svg" alt="logo" >
     </div>
-    <div class="profile" id="profileDropdown">
-        <div class="profile_photo">
-            <img src="icons/profileIcon.svg" alt="profileImage">
+    <div class="auth-buttons flex" id="auth-buttons">
+        <button class="auth_btn" id="btn-login">Войти</button>
+        <button class="auth_btn" id="btn-register">Регистрация</button>
+    </div>
+    <!-- Блок профиля -->
+    <div class="profile hidden" id="profile-block">
+        <div class="profile__info" id="profile-toggle">
+            <span class="profile__name" id="profile-name"></span>
+            <span class="profile__arrow">⌄</span>
         </div>
-        <span class="profile_name">Демьян Аксютик</span>
-        <button class="arrow_up">
-            <img src="icons/arrow-down.png" alt="arrowDown">
-        </button>
+        <div class="profile__menu hidden" id="profile-menu">
+            <div class="profile__item">Связь с поддержкой</div>
+            <div class="profile__item" id="my-cars-btn">Мои авто</div>
+            <div class="profile__item" id="logout-btn">Выйти</div>
+        </div>
     </div>
 </header>
 <main>
@@ -71,44 +78,44 @@
                     <h3 class="statistics_title">Статистика</h3>
 
                     <div class="period-wrap">
-                        <input type="date" id="date" name="date">
+                        <input type="date" id="date-start" name="date">
                         <span class="split"></span>
-                        <input type="date" id="date" name="date">
+                        <input type="date" id="date-end" name="date">
                     </div>
 
                     <ul class="list">
                         <li class="list_item">
                             <span class="text">Топливо</span>
                             <div class="sum-wrap">
-                                <span class="sum-text">111,11</span>
+                                <span class="sum-text">256,33</span>
                                 <span class="currency">BYR</span>
                             </div>
                         </li>
                         <li class="list_item">
                             <span class="text">Мойка</span>
                             <div class="sum-wrap">
-                                <span class="sum-text">111,11</span>
+                                <span class="sum-text">180</span>
                                 <span class="currency">BYR</span>
                             </div>
                         </li>
                         <li class="list_item">
                             <span class="text">Обслуживание</span>
                             <div class="sum-wrap">
-                                <span class="sum-text">111,11</span>
+                                <span class="sum-text">483,21</span>
                                 <span class="currency">BYR</span>
                             </div>
                         </li>
                         <li class="list_item">
                             <span class="text">Парковка</span>
                             <div class="sum-wrap">
-                                <span class="sum-text">111,11</span>
+                                <span class="sum-text">80,46</span>
                                 <span class="currency">BYR</span>
                             </div>
                         </li>
                         <li class="list_item">
                             <span class="text result">Итог</span>
                             <div class="sum-wrap">
-                                <span class="sum-text result">111,11</span>
+                                <span class="sum-text result">1000</span>
                                 <span class="currency">BYR</span>
                             </div>
                         </li>
@@ -134,22 +141,25 @@
                     </button>
                 </div>
 
-                <div class="data-wrap">
+                <form id="dashboard-form" class="data-wrap">
                     <input type="date" id="date" name="date">
 
                     <div class="car-info">
-                        <input type="text" id="volume" name="volume" placeholder="Объем,л">
-                        <input type="text" id="sum" name="sum" placeholder="Сумма,BYR">
+                        <input type="text" id="sum" name="amount" placeholder="Сумма,BYR">
                         <input type="text" id="mileage" name="mileage" placeholder="Пробег,км">
                     </div>
 
                     <div class="note-wrap">
                         <textarea id="note" placeholder="Примечание"></textarea>
                     </div>
-                    
 
-                    <button class="btn-add-note">Добавить</button>
-                </div>
+                    <input type="hidden" id="expense-type" name="type" value="parking">
+
+                    <div id="volume-wrapper" class="hidden">
+                        <input type="number" id="volume" name="volume" placeholder="Объем (л)">
+                    </div>
+                    <button class="btn-add-note" type="submit">Добавить</button>
+                </form>
             </div>
 
             <div class="my-cars">
@@ -163,8 +173,61 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 </main>
+<footer class="footer">
+    <div class="footer__left">
+        <img src="icons/logo.svg" alt="FN Car Logo">
+    </div>
+    <div class="footer__center">
+        <p class="inc">@2025,FNcar</p>
+    </div>
+    <div class="footer__right">
+        <a href="mailto:info@fncar.com" class="footer__email">info@fncar.com</a>
+        <span class="footer__note">Вопросы и обратная связь</span>
+    </div>
+</footer>
+<!-- Модальные окна регистрации и входа -->
+<div class="modal hidden" id="modal-login">
+    <div class="modal_box">
+        <h2 class="modal_title">ВХОД</h2>
+        <input id="login-login" class="modal_input" type="text" placeholder="Логин">
+        <input id="login-password" class="modal_input" type="password" placeholder="Пароль">
+        <button id="login-submit" class="modal_submit">Войти</button>
+    </div>
+</div>
+
+<div class="modal hidden" id="modal-register">
+    <div class="modal_box">
+        <h2 class="modal_title">РЕГИСТРАЦИЯ</h2>
+        <input id="reg-email" class="modal_input" type="email" placeholder="Ваш e-mail">
+        <input id="reg-login" class="modal_input" type="text" placeholder="Логин">
+        <input id="reg-password" class="modal_input" type="password" placeholder="Пароль">
+        <input id="reg-repeat" class="modal_input" type="password" placeholder="Повторите пароль">
+        <button id="register-submit" class="modal_submit">Создать профиль</button>
+    </div>
+</div>
+<!-- Модалка: Добавление авто -->
+<div class="modal hidden" id="modal-add-car">
+    <div class="modal_box">
+        <h2 class="modal_title">ДОБАВЛЕНИЕ АВТО</h2>
+        <input id="car-brand" class="modal_input" type="text" placeholder="Марка">
+        <input id="car-model" class="modal_input" type="text" placeholder="Модель">
+        <input id="car-year" class="modal_input" type="number" placeholder="Год выпуска">
+        <button id="add-car-submit" class="modal_submit">Добавить</button>
+    </div>
+</div>
+
+<!-- Модалка: Список авто -->
+<div class="modal hidden" id="modal-cars-list">
+    <div class="modal_box">
+        <h2 class="modal_title">МОИ АВТО</h2>
+        <div id="car-list" class="car-list"></div>
+        <button id="add-car-btn" class="modal_submit">+</button>
+    </div>
+</div>
+<script src="scripts/dashboard.js"></script>
+<script src="scripts/car-modals.js"></script>
 </body>
 </html>

@@ -1,0 +1,46 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 45px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  font-family: sans-serif;
+
+  .footer__left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 100%;
+    }
+
+    .footer__brand {
+      font-weight: bold;
+      font-size: 24px;
+    }
+  }
+
+  .footer__center {
+    font-size: 14px;
+    color: #444;
+  }
+
+  .footer__right {
+    text-align: right;
+
+    .footer__email {
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .footer__note {
+      display: block;
+      font-size: 12px;
+      color: #555;
+    }
+  }
+}

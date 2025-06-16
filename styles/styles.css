@@ -59,31 +59,122 @@ p {
 .header .logo img {
   width: 100%;
 }
-.header .profile {
+.header .auth {
   display: flex;
-  justify-content: space-between;
-  background: #c0c2c3;
-  width: 235px;
-  padding: 7px 15px;
-  border-radius: 30px;
   align-items: center;
+}
+.header .auth-buttons {
+  display: flex;
+  gap: 20px;
+}
+.header .auth-buttons .auth_btn {
+  padding: 12px 24px;
   font-size: 16px;
+  font-weight: 600;
+  background-color: #f32;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.header .auth-buttons .auth_btn:hover {
+  background-color: #d22;
+}
+.header .profile {
+  position: relative;
+  display: none;
+  align-items: center;
+  margin-left: 20px;
+}
+.header .profile__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f32;
+  padding: 8px 16px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.header .profile__name {
+  font-weight: 600;
+  font-size: 20px;
   color: #000;
 }
-.header .profile .profile_photo {
-  width: 45px;
+.header .profile__arrow {
+  font-size: 20px;
 }
-.header .profile .profile_photo img {
+.header .profile__menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  width: 200px;
+  z-index: 10;
+}
+.header .profile__menu .profile__item {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #111;
+  transition: background 0.2s;
+}
+.header .profile__menu .profile__item:hover {
+  background-color: #f0f0f0;
+}
+.header .modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.header .modal_box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.header .modal_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.header .modal_input {
   width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
-.header .profile .arrow_up {
-  width: 18px;
-  background-color: transparent;
+.header .modal_submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #f32;
+  color: white;
+  font-size: 15px;
   border: none;
-  outline: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
 }
-.header .profile .arrow_up img {
-  width: 100%;
+
+.hidden {
+  display: none !important;
+}
+
+.flex {
+  display: flex !important;
 }
 
 .banner {
@@ -257,7 +348,7 @@ p {
   background-color: #3a3a3a;
 }
 .dashboard .dashboard-wrap {
-  width: 1920px;
+  max-width: 1920px;
   display: grid;
   grid-template-columns: 25% 50% 25%;
   margin: 0 auto;
@@ -269,8 +360,9 @@ p {
   margin-bottom: 25px;
 }
 .dashboard .widget {
+  max-width: 411px;
   width: 411px;
-  height: 380px;
+  height: 410px;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.21);
   padding: 20px 13px;
@@ -283,11 +375,11 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 302px;
+  max-width: 302px;
   margin: 0 auto 20px;
 }
 .dashboard .statistics .period-wrap input {
-  width: 120px;
+  max-width: 120px;
   height: 37px;
   font-size: 16px;
   color: #565656;
@@ -301,6 +393,7 @@ p {
 .dashboard .statistics .period-wrap .split::after {
   content: " ";
   display: inline-block;
+  max-width: 62px;
   width: 62px;
   height: 2px;
   border-top: 2px dashed #fefefe;
@@ -345,7 +438,7 @@ p {
 .dashboard .add-note .console {
   display: flex;
   justify-content: space-between;
-  width: 584px;
+  max-width: 584px;
   margin: 108px auto 60px;
 }
 .dashboard .add-note .console button {
@@ -364,7 +457,7 @@ p {
 .dashboard .add-note .data-wrap #date {
   font-size: 20px;
   font-weight: 400;
-  width: 292px;
+  max-width: 292px;
   height: 63px;
   border-radius: 16px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -378,7 +471,7 @@ p {
   font-size: 18px;
   font-weight: 500;
   color: #5c5c5c;
-  width: 220px;
+  max-width: 220px;
   height: 63px;
   border-radius: 16px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -417,7 +510,7 @@ p {
   flex-direction: column;
   gap: 10px;
   list-style: none;
-  height: 269px;
+  height: 290px;
 }
 .dashboard .my-cars_item {
   font-size: 20px;
@@ -427,4 +520,127 @@ p {
   background-color: #565656;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   padding: 6px 9px;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 45px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  font-family: sans-serif;
+}
+.footer .footer__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer .footer__left img {
+  width: 100%;
+}
+.footer .footer__left .footer__brand {
+  font-weight: bold;
+  font-size: 24px;
+}
+.footer .footer__center {
+  font-size: 14px;
+  color: #444;
+}
+.footer .footer__right {
+  text-align: right;
+}
+.footer .footer__right .footer__email {
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+}
+.footer .footer__right .footer__note {
+  display: block;
+  font-size: 12px;
+  color: #555;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal_box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal_title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.modal_input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.modal_submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #f32;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.car-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.car-list .car-card {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+  position: relative;
+}
+.car-list .car-card .delete-car {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#modal-add-car .modal_box,
+#modal-cars-list .modal_box {
+  width: 340px;
+}
+#modal-add-car .modal_submit,
+#modal-cars-list .modal_submit {
+  background-color: #f32;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

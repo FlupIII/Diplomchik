@@ -2,7 +2,7 @@
   background-color: #3a3a3a;
 
   .dashboard-wrap {
-    width: 1920px;
+    max-width: 1920px;
     display: grid;
     grid-template-columns: 25% 50% 25%;
     margin: 0 auto;
@@ -16,8 +16,9 @@
   }
 
   .widget {
+    max-width: 411px;
     width: 411px;
-    height: 380px;
+    height: 410px;
     border-radius: 15px;
     background-color: rgba($color: #fff, $alpha: .21);
     padding: 20px 13px;
@@ -33,11 +34,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 302px;
+      max-width: 302px;
       margin: 0 auto 20px;
 
       input {
-        width: 120px;
+        max-width: 120px;
         height: 37px;
         font-size: 16px;
         color: #565656;
@@ -52,6 +53,7 @@
       .split::after {
           content: " ";
           display: inline-block;
+          max-width: 62px;
           width: 62px;
           height: 2px;
           border-top: 2px dashed #fefefe;
@@ -106,7 +108,7 @@
     .console {
       display: flex;
       justify-content: space-between;
-      width: 584px;
+      max-width: 584px;
       margin: 108px auto 60px;
 
       button {
@@ -128,7 +130,7 @@
       #date {
         font-size: 20px;
         font-weight: 400;
-        width: 292px;
+        max-width: 292px;
         height: 63px;
         border-radius: 16px;
         box-shadow: 0 4px 4px rgba(#000, .25);
@@ -143,7 +145,7 @@
           font-size: 18px;
           font-weight: 500;
           color: #5c5c5c;
-          width: 220px;
+          max-width: 220px;
           height: 63px;
           border-radius: 16px;
           box-shadow: 0 4px 4px rgba(#000, .25);
@@ -190,7 +192,7 @@
       flex-direction: column;
       gap: 10px;
       list-style: none;
-      height: 269px;
+      height: 290px;
     }
 
     &_item {
